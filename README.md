@@ -10,10 +10,10 @@ The distributor "Autos del Sur" registers weekly corporate sales in a local MySQ
 MySQL (Source) + Snowflake (Vendors) → IICS Mapping → Salesforce (Target)
 
 ## Tech Stack
--MySQL - local distributor database
--Snowflake - vendor reference data
--Informatica IICS - ETL mapping and orchestration
--Salesforce - target CRM (Opportunity object)
+- MySQL - local distributor database
+- Snowflake - vendor reference data
+- Informatica IICS - ETL mapping and orchestration
+- Salesforce - target CRM (Opportunity object)
 
 ## Transformations Applied
 -LTRIM(RTRIM()): Clean spaces from VIN numbers
