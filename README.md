@@ -16,18 +16,18 @@ MySQL (Source) + Snowflake (Vendors) → IICS Mapping → Salesforce (Target)
 - Salesforce - target CRM (Opportunity object)
 
 ## Transformations Applied
--LTRIM(RTRIM()): Clean spaces from VIN numbers
--'Venta - ' \|\| VIN:  Build Opportunity Name
--REPLACECHR(): Replace underscores with spaces in notes
--Lookup: Account.Name = empresa_cliente - Link Opportunity to Salesforce Account
--'Closed Won': Set StageName for all records
+- LTRIM(RTRIM()): Clean spaces from VIN numbers
+- 'Venta - ' \|\| VIN:  Build Opportunity Name
+- REPLACECHR(): Replace underscores with spaces in notes
+- Lookup: Account.Name = empresa_cliente - Link Opportunity to Salesforce Account
+- 'Closed Won': Set StageName for all records
 
 ## Data Quality Rules (Filter)
--monto_total > 0
--vin_vehiculo NOT NULL
--nombre_vendedor NOT NULL
+- monto_total > 0
+- vin_vehiculo NOT NULL
+- nombre_vendedor NOT NULL
 
 ## Results
--6 records read from MySQL and Snowflake
--5 records successfully loaded to Salesforce
--1 record filtered out (NULL vendor name)
+- 6 records read from MySQL and Snowflake
+- 5 records successfully loaded to Salesforce
+- 1 record filtered out (NULL vendor name)
